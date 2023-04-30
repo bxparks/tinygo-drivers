@@ -164,6 +164,7 @@ func (d *Device) start() {
 	pinMode(d.dio, false)
 	delaytm()
 	pinMode(d.clk, false)
+	delaytm()
 }
 
 func (d *Device) stop() {
@@ -172,6 +173,7 @@ func (d *Device) stop() {
 	pinMode(d.clk, true)
 	delaytm()
 	pinMode(d.dio, true)
+	delaytm()
 }
 
 func (d *Device) writeByte(data uint8) {
@@ -188,6 +190,7 @@ func (d *Device) writeByte(data uint8) {
 	pinMode(d.clk, true)
 	delaytm()
 	pinMode(d.clk, false)
+	delaytm()
 }
 
 func (d *Device) writeCmd() {
